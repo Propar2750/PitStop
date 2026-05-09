@@ -1,5 +1,35 @@
 # F1 Pitstop Prediction
 
+## Requirements
+
+- Python 3.9+
+- The Python packages listed in `requirements.txt`:
+  - `numpy`, `pandas`, `scipy`
+  - `scikit-learn`, `lightgbm`
+  - `matplotlib`, `seaborn`
+  - `kagglehub` (for downloading the dataset)
+  - `jupyter` (to run `training.ipynb`)
+
+You will also need a [Kaggle](https://www.kaggle.com/) account to download the competition data.
+
+### Installing the requirements
+
+It is recommended to use a virtual environment:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate        # On Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Or, if you prefer conda:
+
+```bash
+conda create -n f1-pitstop python=3.11 -y
+conda activate f1-pitstop
+pip install -r requirements.txt
+```
+
 ## Data Files
 
 The following data files are **not included** in this repository because they are too large:
