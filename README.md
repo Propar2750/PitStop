@@ -95,6 +95,9 @@ The **baseline** is the fixed reference setup all trials are compared against. A
 - Per fold: predict OOF on the validation indices, predict on `test` and divide by `N_SPLITS`.
 - Final test prediction = mean of the 5 fold predictions, written to `submission.csv` (column `PitNextLap`).
 
+**Reference score**
+- Baseline OOF AUC: `0.9409` (AP `0.7874`, log loss `0.2421`). Trial deltas in `trials.csv` are measured against this.
+
 ## Trial Log
 
 Each experiment is logged as a row in `trials.csv`. The baseline above is the reference; a trial entry should describe how it differs (new feature, different model, hyperparam sweep, etc.).
