@@ -1,0 +1,313 @@
+f1,f2,algorithm,cv_auc
+Driver,Compound,LightGBM,0.6833531311274308
+Driver,Compound,LogReg,0.6510504729572468
+Driver,Compound,DecisionTree,0.7050711119667937
+Driver,Compound,RandomForest,0.707458299055702
+Driver,Race,LightGBM,0.6008290120868649
+Driver,Race,LogReg,0.513124680142585
+Driver,Race,DecisionTree,0.608044662923931
+Driver,Race,RandomForest,0.6347854350536926
+Driver,Year,LightGBM,0.692464100837804
+Driver,Year,LogReg,0.5991514008597993
+Driver,Year,DecisionTree,0.7074365369174741
+Driver,Year,RandomForest,0.7099319518016961
+Driver,PitStop,LightGBM,0.561776938649321
+Driver,PitStop,LogReg,0.5315892154282171
+Driver,PitStop,DecisionTree,0.5789441848042163
+Driver,PitStop,RandomForest,0.5810893638204354
+Driver,Stint,LightGBM,0.7648486131572894
+Driver,Stint,LogReg,0.6876768150774197
+Driver,Stint,DecisionTree,0.7715474955387882
+Driver,Stint,RandomForest,0.7748074421386288
+Driver,TyreLife,LightGBM,0.687254183313589
+Driver,TyreLife,LogReg,0.6992409294520159
+Driver,TyreLife,DecisionTree,0.7073363266766921
+Driver,TyreLife,RandomForest,0.7116272848479883
+Driver,Position,LightGBM,0.563009852806033
+Driver,Position,LogReg,0.5316109920115514
+Driver,Position,DecisionTree,0.576021300802396
+Driver,Position,RandomForest,0.5827389416672356
+Driver,LapTime (s),LightGBM,0.6029098364465565
+Driver,LapTime (s),LogReg,0.5524523004892837
+Driver,LapTime (s),DecisionTree,0.6308381842293067
+Driver,LapTime (s),RandomForest,0.6437693017533365
+Driver,LapTime_Delta,LightGBM,0.7029566701359026
+Driver,LapTime_Delta,LogReg,0.5154934973507923
+Driver,LapTime_Delta,DecisionTree,0.706155217974157
+Driver,LapTime_Delta,RandomForest,0.713415751464481
+Driver,Cumulative_Degradation,LightGBM,0.6754326386494358
+Driver,Cumulative_Degradation,LogReg,0.6131460535024894
+Driver,Cumulative_Degradation,DecisionTree,0.6765174228122449
+Driver,Cumulative_Degradation,RandomForest,0.687411035386295
+Driver,RaceProgress,LightGBM,0.739412510924361
+Driver,RaceProgress,LogReg,0.6638501974854524
+Driver,RaceProgress,DecisionTree,0.736004876337856
+Driver,RaceProgress,RandomForest,0.7446632417624838
+Driver,Position_Change,LightGBM,0.6801106471807884
+Driver,Position_Change,LogReg,0.5418783356200016
+Driver,Position_Change,DecisionTree,0.6882332919264003
+Driver,Position_Change,RandomForest,0.6911056561210369
+Compound,Race,LightGBM,0.7608987747231044
+Compound,Race,LogReg,0.6534408422152276
+Compound,Race,DecisionTree,0.7448138410724775
+Compound,Race,RandomForest,0.7578982494137032
+Compound,Year,LightGBM,0.829268466939916
+Compound,Year,LogReg,0.6886269463515508
+Compound,Year,DecisionTree,0.8290234248255617
+Compound,Year,RandomForest,0.8290248817316528
+Compound,PitStop,LightGBM,0.6751364231356395
+Compound,PitStop,LogReg,0.6507269260172692
+Compound,PitStop,DecisionTree,0.6767931185808226
+Compound,PitStop,RandomForest,0.6767933581288351
+Compound,Stint,LightGBM,0.77208716778399
+Compound,Stint,LogReg,0.6912367036380692
+Compound,Stint,DecisionTree,0.7714582191210386
+Compound,Stint,RandomForest,0.7715640674592334
+Compound,TyreLife,LightGBM,0.7424887308843341
+Compound,TyreLife,LogReg,0.7222561755096086
+Compound,TyreLife,DecisionTree,0.7481000716981581
+Compound,TyreLife,RandomForest,0.7491336735634698
+Compound,Position,LightGBM,0.6802057909632118
+Compound,Position,LogReg,0.6476581183163264
+Compound,Position,DecisionTree,0.6892722754396872
+Compound,Position,RandomForest,0.6898885004040549
+Compound,LapTime (s),LightGBM,0.7340040828934793
+Compound,LapTime (s),LogReg,0.6598761299393984
+Compound,LapTime (s),DecisionTree,0.7237931406417207
+Compound,LapTime (s),RandomForest,0.7339947036762096
+Compound,LapTime_Delta,LightGBM,0.8071156123694195
+Compound,LapTime_Delta,LogReg,0.6594602545649582
+Compound,LapTime_Delta,DecisionTree,0.798462589730876
+Compound,LapTime_Delta,RandomForest,0.8060129977237465
+Compound,Cumulative_Degradation,LightGBM,0.7655579752868671
+Compound,Cumulative_Degradation,LogReg,0.6975141229754516
+Compound,Cumulative_Degradation,DecisionTree,0.7530604339232582
+Compound,Cumulative_Degradation,RandomForest,0.7649573656613284
+Compound,RaceProgress,LightGBM,0.7780164884784189
+Compound,RaceProgress,LogReg,0.6878836914966708
+Compound,RaceProgress,DecisionTree,0.7587252759296143
+Compound,RaceProgress,RandomForest,0.772217158254343
+Compound,Position_Change,LightGBM,0.7708976254493014
+Compound,Position_Change,LogReg,0.6592660876919908
+Compound,Position_Change,DecisionTree,0.7773459760067131
+Compound,Position_Change,RandomForest,0.7783229497043908
+Race,Year,LightGBM,0.7924505331123108
+Race,Year,LogReg,0.5942353049308884
+Race,Year,DecisionTree,0.7747113632795788
+Race,Year,RandomForest,0.7902733870108194
+Race,PitStop,LightGBM,0.6347758136206203
+Race,PitStop,LogReg,0.5219401528693305
+Race,PitStop,DecisionTree,0.6096940495194763
+Race,PitStop,RandomForest,0.6392250056008533
+Race,Stint,LightGBM,0.8042016533773717
+Race,Stint,LogReg,0.6895080965985272
+Race,Stint,DecisionTree,0.7895838841044547
+Race,Stint,RandomForest,0.8015059609823503
+Race,TyreLife,LightGBM,0.7500046830855633
+Race,TyreLife,LogReg,0.6993002219284086
+Race,TyreLife,DecisionTree,0.7282840008974564
+Race,TyreLife,RandomForest,0.741389164383825
+Race,Position,LightGBM,0.6507406132922837
+Race,Position,LogReg,0.5160608548947456
+Race,Position,DecisionTree,0.6273616895608781
+Race,Position,RandomForest,0.6365753379497057
+Race,LapTime (s),LightGBM,0.7087585467329032
+Race,LapTime (s),LogReg,0.5389295451984812
+Race,LapTime (s),DecisionTree,0.669885324858259
+Race,LapTime (s),RandomForest,0.6957545092224665
+Race,LapTime_Delta,LightGBM,0.784211165807802
+Race,LapTime_Delta,LogReg,0.5181206036979672
+Race,LapTime_Delta,DecisionTree,0.7439297302944617
+Race,LapTime_Delta,RandomForest,0.7658441528344925
+Race,Cumulative_Degradation,LightGBM,0.7844908278154104
+Race,Cumulative_Degradation,LogReg,0.6109505718111573
+Race,Cumulative_Degradation,DecisionTree,0.7019162392489935
+Race,Cumulative_Degradation,RandomForest,0.7434300078939262
+Race,RaceProgress,LightGBM,0.8206553623440311
+Race,RaceProgress,LogReg,0.6643376232940603
+Race,RaceProgress,DecisionTree,0.7436776411642879
+Race,RaceProgress,RandomForest,0.777779800824673
+Race,Position_Change,LightGBM,0.7365978670807829
+Race,Position_Change,LogReg,0.5272964112113787
+Race,Position_Change,DecisionTree,0.712628737600168
+Race,Position_Change,RandomForest,0.7307755468519112
+Year,PitStop,LightGBM,0.6989543765593652
+Year,PitStop,LogReg,0.591599684950397
+Year,PitStop,DecisionTree,0.6988338965973326
+Year,PitStop,RandomForest,0.6988148845275484
+Year,Stint,LightGBM,0.8360583538651396
+Year,Stint,LogReg,0.6908504372503691
+Year,Stint,DecisionTree,0.8592223655501129
+Year,Stint,RandomForest,0.8592398025665009
+Year,TyreLife,LightGBM,0.827808830382087
+Year,TyreLife,LogReg,0.7025524143041012
+Year,TyreLife,DecisionTree,0.8288706989779451
+Year,TyreLife,RandomForest,0.8291115260005256
+Year,Position,LightGBM,0.702770481923042
+Year,Position,LogReg,0.5967020564785548
+Year,Position,DecisionTree,0.7094978336081825
+Year,Position,RandomForest,0.7108056617778479
+Year,LapTime (s),LightGBM,0.7708936288072263
+Year,LapTime (s),LogReg,0.6043909634021848
+Year,LapTime (s),DecisionTree,0.7563380692552237
+Year,LapTime (s),RandomForest,0.769074032108275
+Year,LapTime_Delta,LightGBM,0.7543827747561056
+Year,LapTime_Delta,LogReg,0.5937464980855314
+Year,LapTime_Delta,DecisionTree,0.740156468123733
+Year,LapTime_Delta,RandomForest,0.7545017358998012
+Year,Cumulative_Degradation,LightGBM,0.7920356200129408
+Year,Cumulative_Degradation,LogReg,0.6407367388574344
+Year,Cumulative_Degradation,DecisionTree,0.7753161036361689
+Year,Cumulative_Degradation,RandomForest,0.7909963854671312
+Year,RaceProgress,LightGBM,0.8430842872798479
+Year,RaceProgress,LogReg,0.6647730903481741
+Year,RaceProgress,DecisionTree,0.8399447344594126
+Year,RaceProgress,RandomForest,0.8421626784048842
+Year,Position_Change,LightGBM,0.7037675169290176
+Year,Position_Change,LogReg,0.602129993129749
+Year,Position_Change,DecisionTree,0.7150542354371219
+Year,Position_Change,RandomForest,0.7155415555264215
+PitStop,Stint,LightGBM,0.7366471109198455
+PitStop,Stint,LogReg,0.679969887314356
+PitStop,Stint,DecisionTree,0.7492161425784803
+PitStop,Stint,RandomForest,0.749233202427938
+PitStop,TyreLife,LightGBM,0.7081032964757392
+PitStop,TyreLife,LogReg,0.7045981004547488
+PitStop,TyreLife,DecisionTree,0.7096535846482097
+PitStop,TyreLife,RandomForest,0.7099248924717488
+PitStop,Position,LightGBM,0.5479144725398141
+PitStop,Position,LogReg,0.5368017935848463
+PitStop,Position,DecisionTree,0.548560160819833
+PitStop,Position,RandomForest,0.5485625802124654
+PitStop,LapTime (s),LightGBM,0.6314052001822839
+PitStop,LapTime (s),LogReg,0.5492412540228178
+PitStop,LapTime (s),DecisionTree,0.6241022958930282
+PitStop,LapTime (s),RandomForest,0.6330614977851647
+PitStop,LapTime_Delta,LightGBM,0.7187505487218846
+PitStop,LapTime_Delta,LogReg,0.5518061175294426
+PitStop,LapTime_Delta,DecisionTree,0.7068155497366652
+PitStop,LapTime_Delta,RandomForest,0.7195362871711548
+PitStop,Cumulative_Degradation,LightGBM,0.6874955373222768
+PitStop,Cumulative_Degradation,LogReg,0.6160582331437425
+PitStop,Cumulative_Degradation,DecisionTree,0.6787128375160235
+PitStop,Cumulative_Degradation,RandomForest,0.6889459713551156
+PitStop,RaceProgress,LightGBM,0.7403925245523616
+PitStop,RaceProgress,LogReg,0.6600704558712049
+PitStop,RaceProgress,DecisionTree,0.7261588942023023
+PitStop,RaceProgress,RandomForest,0.7403902086341899
+PitStop,Position_Change,LightGBM,0.6717330863749291
+PitStop,Position_Change,LogReg,0.5475145478974479
+PitStop,Position_Change,DecisionTree,0.6832867202718386
+PitStop,Position_Change,RandomForest,0.6836831130043836
+Stint,TyreLife,LightGBM,0.7950116156611671
+Stint,TyreLife,LogReg,0.7324296434305231
+Stint,TyreLife,DecisionTree,0.7956669827480081
+Stint,TyreLife,RandomForest,0.7967130067865769
+Stint,Position,LightGBM,0.7568165626363019
+Stint,Position,LogReg,0.6910309990943326
+Stint,Position,DecisionTree,0.758284580023565
+Stint,Position,RandomForest,0.7594156211581051
+Stint,LapTime (s),LightGBM,0.7844534923885782
+Stint,LapTime (s),LogReg,0.6920722274064164
+Stint,LapTime (s),DecisionTree,0.777033936139256
+Stint,LapTime (s),RandomForest,0.7836437674824508
+Stint,LapTime_Delta,LightGBM,0.8466914139570321
+Stint,LapTime_Delta,LogReg,0.6965518235049152
+Stint,LapTime_Delta,DecisionTree,0.8388143736926318
+Stint,LapTime_Delta,RandomForest,0.8451322167001935
+Stint,Cumulative_Degradation,LightGBM,0.8103639036554631
+Stint,Cumulative_Degradation,LogReg,0.6982030823358911
+Stint,Cumulative_Degradation,DecisionTree,0.8010481110245796
+Stint,Cumulative_Degradation,RandomForest,0.8084805129750723
+Stint,RaceProgress,LightGBM,0.7994814249561539
+Stint,RaceProgress,LogReg,0.6843983901284449
+Stint,RaceProgress,DecisionTree,0.7807391876100706
+Stint,RaceProgress,RandomForest,0.7944315428449421
+Stint,Position_Change,LightGBM,0.814135981945623
+Stint,Position_Change,LogReg,0.6914485880845734
+Stint,Position_Change,DecisionTree,0.8233854680087256
+Stint,Position_Change,RandomForest,0.8243254690827302
+TyreLife,Position,LightGBM,0.705851979210645
+TyreLife,Position,LogReg,0.7024057098860251
+TyreLife,Position,DecisionTree,0.7051793777618462
+TyreLife,Position,RandomForest,0.7063181713474302
+TyreLife,LapTime (s),LightGBM,0.7358072691708766
+TyreLife,LapTime (s),LogReg,0.698694031270134
+TyreLife,LapTime (s),DecisionTree,0.7187009516771998
+TyreLife,LapTime (s),RandomForest,0.7321095140758092
+TyreLife,LapTime_Delta,LightGBM,0.8192878547708355
+TyreLife,LapTime_Delta,LogReg,0.7007218550220409
+TyreLife,LapTime_Delta,DecisionTree,0.8064517236946932
+TyreLife,LapTime_Delta,RandomForest,0.8147410821285093
+TyreLife,Cumulative_Degradation,LightGBM,0.7646449864965437
+TyreLife,Cumulative_Degradation,LogReg,0.7099688145417057
+TyreLife,Cumulative_Degradation,DecisionTree,0.7524846993563514
+TyreLife,Cumulative_Degradation,RandomForest,0.7590359971605787
+TyreLife,RaceProgress,LightGBM,0.833024341627307
+TyreLife,RaceProgress,LogReg,0.6996068171945561
+TyreLife,RaceProgress,DecisionTree,0.7771571909118569
+TyreLife,RaceProgress,RandomForest,0.809936992626498
+TyreLife,Position_Change,LightGBM,0.7910067372564895
+TyreLife,Position_Change,LogReg,0.6979770371304663
+TyreLife,Position_Change,DecisionTree,0.789109098365724
+TyreLife,Position_Change,RandomForest,0.7906263338251032
+Position,LapTime (s),LightGBM,0.6408876372689701
+Position,LapTime (s),LogReg,0.5408479404706826
+Position,LapTime (s),DecisionTree,0.629074603895684
+Position,LapTime (s),RandomForest,0.6357695676842294
+Position,LapTime_Delta,LightGBM,0.720094456244816
+Position,LapTime_Delta,LogReg,0.518101300952953
+Position,LapTime_Delta,DecisionTree,0.7080050828967595
+Position,LapTime_Delta,RandomForest,0.7146658280178915
+Position,Cumulative_Degradation,LightGBM,0.7001634450827391
+Position,Cumulative_Degradation,LogReg,0.6115609741776672
+Position,Cumulative_Degradation,DecisionTree,0.6770408996369846
+Position,Cumulative_Degradation,RandomForest,0.687610335981714
+Position,RaceProgress,LightGBM,0.7494957681805168
+Position,RaceProgress,LogReg,0.6651823949072916
+Position,RaceProgress,DecisionTree,0.7284807982600653
+Position,RaceProgress,RandomForest,0.7322019150611432
+Position,Position_Change,LightGBM,0.6888121129798173
+Position,Position_Change,LogReg,0.537151246700519
+Position,Position_Change,DecisionTree,0.6867479530673327
+Position,Position_Change,RandomForest,0.688852867146871
+LapTime (s),LapTime_Delta,LightGBM,0.7677755499061077
+LapTime (s),LapTime_Delta,LogReg,0.5392667780470446
+LapTime (s),LapTime_Delta,DecisionTree,0.7260656620052106
+LapTime (s),LapTime_Delta,RandomForest,0.7571073447567596
+LapTime (s),Cumulative_Degradation,LightGBM,0.7663556771796676
+LapTime (s),Cumulative_Degradation,LogReg,0.6123334841792512
+LapTime (s),Cumulative_Degradation,DecisionTree,0.7051872559406225
+LapTime (s),Cumulative_Degradation,RandomForest,0.7376541549367113
+LapTime (s),RaceProgress,LightGBM,0.7811542577023695
+LapTime (s),RaceProgress,LogReg,0.6618596674029589
+LapTime (s),RaceProgress,DecisionTree,0.7381274513329299
+LapTime (s),RaceProgress,RandomForest,0.7591111187243329
+LapTime (s),Position_Change,LightGBM,0.7231323609182476
+LapTime (s),Position_Change,LogReg,0.548534951376511
+LapTime (s),Position_Change,DecisionTree,0.7095759779730965
+LapTime (s),Position_Change,RandomForest,0.7192949978563721
+LapTime_Delta,Cumulative_Degradation,LightGBM,0.7834407767317219
+LapTime_Delta,Cumulative_Degradation,LogReg,0.6110767673341115
+LapTime_Delta,Cumulative_Degradation,DecisionTree,0.7482904311794633
+LapTime_Delta,Cumulative_Degradation,RandomForest,0.7720567082277487
+LapTime_Delta,RaceProgress,LightGBM,0.8326760321313497
+LapTime_Delta,RaceProgress,LogReg,0.6647493002829475
+LapTime_Delta,RaceProgress,DecisionTree,0.8157582464063574
+LapTime_Delta,RaceProgress,RandomForest,0.8263232758224458
+LapTime_Delta,Position_Change,LightGBM,0.7341599060614359
+LapTime_Delta,Position_Change,LogReg,0.5296509748410975
+LapTime_Delta,Position_Change,DecisionTree,0.7180445863326591
+LapTime_Delta,Position_Change,RandomForest,0.7291587514580719
+Cumulative_Degradation,RaceProgress,LightGBM,0.7957027731828814
+Cumulative_Degradation,RaceProgress,LogReg,0.6701864139361907
+Cumulative_Degradation,RaceProgress,DecisionTree,0.765388581624772
+Cumulative_Degradation,RaceProgress,RandomForest,0.7802693761608109
+Cumulative_Degradation,Position_Change,LightGBM,0.7523720877803541
+Cumulative_Degradation,Position_Change,LogReg,0.6154742348048171
+Cumulative_Degradation,Position_Change,DecisionTree,0.7398814730566791
+Cumulative_Degradation,Position_Change,RandomForest,0.7477687279957971
+RaceProgress,Position_Change,LightGBM,0.8067700339095022
+RaceProgress,Position_Change,LogReg,0.6615959758430426
+RaceProgress,Position_Change,DecisionTree,0.7977827058012652
+RaceProgress,Position_Change,RandomForest,0.8033862512679358
