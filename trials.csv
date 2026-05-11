@@ -1,1 +1,2 @@
 trial,date,commit,algorithm,features,cv_auc,lb,notes
+1,2026-05-11,16e74a9,"RandomForest (n=500, max_features=sqrt, min_samples_leaf=20)",baseline (cats label-encoded as int codes),0.9407,,"first RF trial; AP 0.7892, LL 0.2462; ~-0.0002 vs LightGBM baseline 0.9409"
