@@ -44,3 +44,9 @@ Every column except `lb` and `notes` should be filled. If `cv_auc` is blank, the
 - The notebook expects all CSVs at the project root (`DATA_DIR = Path('.')`).
 - `RANDOM_STATE = 42` everywhere; don't change it without flagging it as a trial.
 - `NOTES.md` is a free-form scratchpad for ideas; it's not a substitute for `trials.csv`.
+
+## Running the CV (perf gotchas)
+
+- **Use `num_threads=8` and `force_row_wise=True` in the LightGBM params.** With defaults (or `num_threads=24`), training is ~200× slower on this machine due to thread contention — a 5-fold run that should take ~75s drags out to hours. The score is unchanged in any meaningful way; these are performance-only flags. Don't remove them.
+- **Kill any stale Jupyter kernels before running.** `ps aux | grep ipykernel` — old `ipykernel_launcher` processes (from prior nbconvert/IDE sessions) can hog 6+ cores and starve the run. Trial-running from a script (`python3 -u /tmp/run.py`) is more reliable than `jupyter nbconvert --execute` for this exact reason.
+- A 5-fold CV run should complete in ~1–2 minutes. If it's been longer than 5 minutes with no fold output, something is wrong (stale kernel, wrong thread count) — kill it and diagnose, don't keep waiting.
