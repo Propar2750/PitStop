@@ -2,3 +2,4 @@ train.csv
 test.csv
 sample_submission.csv
 submission.csv
+catboost_info/
