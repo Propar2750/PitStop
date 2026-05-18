@@ -39,26 +39,7 @@ TARGET, ID_COL = 'PitNextLap', 'id'
 # === feature engineering (edit me to test ideas) ===
 def add_features(df):
     df = df.copy(); eps = 1e-6
-    df['RemainingRace'] = 1.0 - df['RaceProgress']
-    df['PitWindow'] = df['RaceProgress'] * (1 - df['RaceProgress'])
-    df['IsLateRace'] = (df['RaceProgress'] > 0.7).astype(int)
-    df['LapTime_per_TyreLife'] = df['LapTime (s)'] / (df['TyreLife'] + eps)
-    df['Deg_per_TyreLife'] = df['Cumulative_Degradation'] / (df['TyreLife'] + eps)
-    df['TyreStress'] = df['TyreLife'] * df['Cumulative_Degradation']
-    df['StrategicUrgency'] = df['TyreStress'] * df['RemainingRace']
-    df['TyreExhaustion'] = (df['TyreLife'] ** 2) * df['RemainingRace']
     df['TyreCliff'] = df['TyreLife'] * df['LapTime_Delta']
-    df['PositionPressure'] = df['Position'] * df['RemainingRace']
-    df['RecoveryPressure'] = abs(df['Position_Change']) * df['Cumulative_Degradation']
-    compound_map = {'HARD': 1, 'MEDIUM': 2, 'SOFT': 3}
-    df['CompoundCode'] = df['Compound'].astype(str).str.upper().map(compound_map).fillna(2)
-    df['CompoundTyreInteraction'] = df['CompoundCode'] * df['TyreLife']
-    df['StrategyPressure'] = df['TyreStress'] * df['PitWindow']
-    df['PitOffsetPotential'] = df['LapTime_Delta'] * df['RemainingRace'] * 10
-    df['UndercutPotential'] = df['LapTime_Delta'] * abs(df['Position_Change']) * df['RemainingRace']
-    df['StintSurvivalPressure'] = df['TyreLife'] * df['RemainingRace'] * df['LapTime_Delta']
-    df['PaceCollapse'] = df['LapTime_Delta'] * df['Cumulative_Degradation']
-    df['LateRaceTyreRisk'] = df['IsLateRace'] * df['TyreLife']
     return df
 
 train_fe = add_features(train)
@@ -81,7 +62,7 @@ else:
     groups = groups_full
     print(f'no subsampling: {len(train_fe):,} rows', flush=True)
 
-DROP_COLS = [ID_COL, TARGET, 'LapNumber']
+DROP_COLS = [ID_COL, TARGET]
 FEATURES = [c for c in train_fe.columns if c not in DROP_COLS]
 y = train_fe[TARGET]
 X = train_fe[FEATURES].copy()
