@@ -2,6 +2,18 @@
 
 This repo is a Kaggle competition workspace for `playground-series-s6e5` — predicting `PitNextLap` (binary classification). Modeling work happens in `training.ipynb`; EDA in `eda.ipynb`. The reference setup ("baseline") and CV scheme are specified in `README.md` under **Baseline** — read that section before suggesting any modeling change so you know what every trial is being compared against.
 
+## Data shape caveat — no cross-driver same-lap features
+
+The dataset is **sparse per race**: we only have a subset of laps per (Race,Year,Driver), not the full continuous lap-by-lap field. That rules out any feature that needs a complete same-lap snapshot of the field:
+
+- Gap to car ahead / behind (requires all drivers' LapTime on the same lap)
+- Undercut/overcut threat (requires knowing if a specific rival pitted on lap *t* or *t-1*)
+- Field pit pressure / count of pits on lap *t-1* across the field
+- Pace-vs-field-median on the same lap
+- Any "rank within (Race,Year,LapNumber)" feature
+
+Do not propose these as trials — the same-lap field is incomplete, so the aggregates are unreliable and noisy in ways the model cannot recover from. Same-driver temporal features and (Race,Compound)/(Driver) aggregates over a whole race are fine; same-lap cross-driver aggregates are not.
+
 ## Trial logging workflow
 
 Every modeling change that produces a CV score is a **trial** and must be recorded in `trials.csv`. The baseline itself is *not* a trial — it's the reference. A trial is anything that deviates from the baseline (new feature, removed feature, different algorithm, hyperparam change, different CV scheme, ensembling, etc.).
