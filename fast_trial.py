@@ -32,14 +32,57 @@ SEED        = 42
 # ---------------------------------------------------------------
 
 t0 = time.time()
-DATA_DIR = Path('/home/propar/Documents/Projects/F1-pitstop-prediction')
+DATA_DIR = Path(r'C:\Users\Krishang Goel\PitStop')
 train = pd.read_csv(DATA_DIR / 'train.csv')
 test = pd.read_csv(DATA_DIR / 'test.csv')
 TARGET, ID_COL = 'PitNextLap', 'id'
 
 # === feature engineering (edit me to test ideas) ===
 def add_features(df):
-    df = df.copy(); eps = 1e-6
+    df = df.copy()
+    eps = 1e-6
+
+    # ── Proven winners only (T8 confirmed) ───────────────────
+    df['RemainingRace']        = 1.0 - df['RaceProgress']
+    df['PitWindow']            = df['RaceProgress'] * (1 - df['RaceProgress'])
+    df['IsLateRace']           = (df['RaceProgress'] > 0.7).astype(int)
+    df['LapTime_per_TyreLife'] = df['LapTime (s)']            / (df['TyreLife'] + eps)
+    df['Deg_per_TyreLife']     = df['Cumulative_Degradation'] / (df['TyreLife'] + eps)
+    df['TyreStress']           = df['TyreLife'] * df['Cumulative_Degradation']
+    df['StrategicUrgency']     = df['TyreStress'] * df['RemainingRace']
+
+    # ── NEW: Previous stint length for this driver in this race ──
+    # How long did their LAST stint last? Tells model about driver style
+    # and whether they tend to do long or short stints.
+    # Computed via shift on Stint number — never tried in any trial.
+    df = df.sort_values(['Race', 'Year', 'Driver', 'LapNumber'])
+
+    # TyreLife at end of previous stint = how long they stayed out last time
+    df['PrevStintLen'] = (
+        df.groupby(['Race', 'Year', 'Driver', 'Stint'])['TyreLife']
+        .transform('max')                        # max TyreLife = stint length
+    )
+    df['PrevStintLen'] = (
+        df.groupby(['Race', 'Year', 'Driver'])['PrevStintLen']
+        .shift(1)                                # previous stint's length
+        .fillna(df['TyreLife'])                  # first stint: use current TyreLife
+    )
+
+    # How far through their typical stint length are they right now?
+    df['StintCompletion'] = df['TyreLife'] / (df['PrevStintLen'] + eps)
+
+    # ── NEW: LapTime trend within stint ──────────────────────
+    # Is pace getting worse faster than average for this stint?
+    # Expanding mean of LapTime_Delta within stint
+    df['DeltaTrend'] = (
+        df.groupby(['Race', 'Year', 'Driver', 'Stint'])['LapTime_Delta']
+        .transform(lambda x: x.expanding().mean())
+    )
+    # Is current lap worse than the stint average? Positive = degrading
+    df['DeltaVsStintAvg'] = df['LapTime_Delta'] - df['DeltaTrend']
+
+    df = df.sort_values('id').reset_index(drop=True)
+
     return df
 
 # =============================================================
