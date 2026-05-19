@@ -32,7 +32,7 @@ SEED        = 42
 # ---------------------------------------------------------------
 
 t0 = time.time()
-DATA_DIR = Path(r'C:\Users\Krishang Goel\PitStop')
+DATA_DIR = Path(r'/home/propar/Documents/Projects/F1-pitstop-prediction')
 train = pd.read_csv(DATA_DIR / 'train.csv')
 test = pd.read_csv(DATA_DIR / 'test.csv')
 TARGET, ID_COL = 'PitNextLap', 'id'
